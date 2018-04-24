@@ -1,12 +1,12 @@
 
-var chars_plus = "‚ï‚ ‚¯‚¤‚Â‚í‚¿‚¢‚Ë‚©‚è‚ë‚Ñ‚´‚Ô‚Û‚¬‚²‚å‚Î";
-var chars_minus = "‚Ğ‚³‚Ó‚î‚à‚«‚±‚Ì‚È‚æ‚Ê‚Í‚Ÿ‚°‚£‚Ã‚ì‚À‚¡‚ª";
-var chars_lt = "‚¹‚ä‚¦‚¨‚ç‚½‚é‚É‚¸‚Ø‚Å‚®‚Õ‚Ú";
-var chars_gt = "‚·‚ß‚Ä‚­‚Ş‚ê‚ğ‚Ù‚º‚ã‚¥‚§‚¾";
-var chars_while = "‚»‚Ö‚Ò‚á";
-var chars_end = "‚İ‚â‚¼‚×";
-var chars_dot = "‚µ‚Ü‚Æ‚Á";
-var chars_comma = "‚ñ‚¶‚Ï‚Ç";
+var chars_plus = "ã‚‘ã‚ã‘ã†ã¤ã‚ã¡ã„ã­ã‹ã‚Šã‚ã³ã–ã¶ã½ãã”ã‚‡ã°";
+var chars_minus = "ã²ã•ãµã‚ã‚‚ãã“ã®ãªã‚ˆã¬ã¯ãã’ã…ã¥ã‚ã¢ãƒãŒ";
+var chars_lt = "ã›ã‚†ãˆãŠã‚‰ãŸã‚‹ã«ãšãºã§ãã·ã¼";
+var chars_gt = "ã™ã‚ã¦ãã‚€ã‚Œã‚’ã»ãœã‚…ã‡ã‰ã ";
+var chars_while = "ãã¸ã´ã‚ƒ";
+var chars_end = "ã¿ã‚„ãã¹";
+var chars_dot = "ã—ã¾ã¨ã£";
+var chars_comma = "ã‚“ã˜ã±ã©";
 
 var chars_brainfuck = "+-<>[].,";
 
