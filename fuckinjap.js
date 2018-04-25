@@ -72,4 +72,68 @@ function toFuckinjap(origin) {
 	return result;
 }
 
-
+function run(source) {
+	var result = "";
+	var arr = Array(256);
+	var ptr = 0;
+	for (var i = 0; i < arr.length; i++) {
+		arr[i] = 0;
+	}
+	for (var i = 0; i < source.length; i++) {
+		var object = source.charAt(i);
+		if (object == '+') {
+			arr[ptr]++;
+		} else if (object == '-') {
+			arr[ptr]--;
+		} else if (object == '<') {
+			ptr = (ptr - 1 + 256) % 256;
+		} else if (object == '>') {
+			ptr = (ptr + 1 + 256) % 256;
+		} else if (object == '[') {
+			if (arr[ptr] == 0) {
+				var depth = 1;
+				while (true) {
+					i++;
+					object = source.charAt(i);
+					if (object == ']') {
+						depth--;
+					} else if (object == '[') {
+						depth++;
+					}
+					if (depth == 0) {
+						break;
+					} else if (i < 0 || i >= source.length) {
+						throw "source overflow (" + i + ")";
+					}
+				}
+			}
+		} else if (object == ']') {
+			if (arr[ptr] != 0) {
+				var depth = 1;
+				while (true) {
+					i--;
+					object = source.charAt(i);
+					if (object == '[') {
+						depth--;
+					} else if (object == ']') {
+						depth++;
+					}
+					if (depth == 0) {
+						break;
+					} else if (i < 0 || i >= source.length) {
+						throw "source overflow (" + i + ")";
+					}
+				}
+			}
+		} else if (object == '.') {
+			result += String.fromCharCode(arr[ptr]);
+		} else if (object == ',') {
+			arr[ptr] = Math.floor( Math.random() * 256 );
+		} else if (i < 0 || i >= source.length) {
+			throw "source overflow (" + i + ")";
+		} else {
+			throw "unrecognizable character \"" + object + "\" at char " + i;
+		}
+	}
+	return result;
+}
