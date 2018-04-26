@@ -5,13 +5,14 @@ var chars_lt = "せゆえおらたるにずぺでぐぷぼ";
 var chars_gt = "すめてくむれをほぜゅぇぉだ";
 var chars_while = "そへぴゃ";
 var chars_end = "みやぞべ";
-var chars_dot = "しまとっ";
-var chars_comma = "んじぱど";
+var chars_dot = "しまとっ。";
+var chars_comma = "んじぱど、";
 
 var chars_brainfuck = "+-<>[].,";
 
 function toBrainfuck(origin) {
 	var result = "";
+	setChars();
 	for (var i = 0; i < origin.length; i++) {
 		var object = origin.charAt(i);
 		if (chars_plus.indexOf(object) >= 0) {
@@ -39,6 +40,7 @@ function toBrainfuck(origin) {
 
 function toFuckinjap(origin) {
 	var result = "";
+	setChars();
 	for (var i = 0; i < origin.length; i++) {
 		var object = origin.charAt(i);
 		if (object == '+') {
@@ -76,6 +78,7 @@ function run(source) {
 	var result = "";
 	var arr = Array(256);
 	var ptr = 0;
+	setChars();
 	for (var i = 0; i < arr.length; i++) {
 		arr[i] = 0;
 	}
@@ -132,7 +135,7 @@ function run(source) {
 		} else if (i < 0 || i >= source.length) {
 			throw "source overflow (" + i + ")";
 		} else {
-			throw "unrecognizable character \"" + object + "\" at char " + i;
+			// throw "unrecognizable character \"" + object + "\" at char " + i;
 		}
 	}
 	return result;

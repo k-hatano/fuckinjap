@@ -4,8 +4,47 @@
 <script type="text/javascript" src="fuckinjap_for_form.js"></script>
 </head>
 <body>
+<table border="0">
+<tr>
+<td>
 <textarea id="textarea" rows="16" cols="64">++++++++[&gt;++++[&gt;++&gt;+++&gt;+++&gt;+&lt;&lt;&lt;&lt;-]&gt;+&gt;+&gt;-&gt;&gt;+[&lt;]&lt;-]&gt;&gt;.&gt;---.+++++++..+++.&gt;&gt;.&lt;-.&lt;.+++.------.--------.&gt;&gt;+.&gt;++.</textarea><br />
+</td>
+<td style="vertical-align:top;">
+<span id="result"></span>
+</td>
+</tr>
+</table>
 <button id="to_brainfuck" onclick="formToBrainfuck();">fuckinjap → brainfuck</button>&nbsp;&nbsp;<button id="to_fuckinjap" onclick="formToFuckinjap();">brainfuck → fuckinjap</button>&nbsp;&nbsp;<button id="run_brainfuck" onclick="runBrainfuck();">Run</button>
+
+<br />
+<hr />
+Translation table
+<table border="0">
+<tr>
+<td>+</td><td><input type="text" id="chars_plus" size="40" value="ゑあけうつわちいねかりろびざぶぽぎごょば"></td>
+</tr>
+<tr>
+<td>-</td><td><input type="text" id="chars_minus" size="40" value="ひさふゐもきこのなよぬはぁげぅづゎぢぃが"></td>
+</tr>
+<tr>
+<td>&lt;</td><td><input type="text" id="chars_lt" size="40" value="せゆえおらたるにずぺでぐぷぼ"></td>
+</tr>
+<tr>
+<td>&gt;</td><td><input type="text" id="chars_gt" size="40" value="すめてくむれをほぜゅぇぉだ"></td>
+</tr>
+<tr>
+<td>[</td><td><input type="text" id="chars_while" size="40" value="そへぴゃ"></td>
+</tr>
+<tr>
+<td>]</td><td><input type="text" id="chars_end" size="40" value="みやぞべ"></td>
+</tr>
+<tr>
+<td>.</td><td><input type="text" id="chars_dot" size="40" value="しまとっ。"></td>
+</tr>
+<tr>
+<td>,</td><td><input type="text" id="chars_comma" size="40" value="んじぱど、"></td>
+</tr>
+</table>
 
 </body>
 </html>
